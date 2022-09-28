@@ -1,10 +1,14 @@
 import logo from './logo.svg';
-import './App.css';
-
+import AllRoutes from './Pages/AllRoutes';
+import Navbar from './Components/Navbar';
+import Body from './Pages/Body';
 function App() {
   return (
     <div className="App">
-    <h1> adarsh</h1>
+ 
+   <Navbar/>
+   <AllRoutes/>
+   <Body />
     </div>
   );
 }
