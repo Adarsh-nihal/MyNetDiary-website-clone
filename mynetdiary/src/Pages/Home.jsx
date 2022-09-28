@@ -1,10 +1,11 @@
 
-
+import Body from "./Body"
 
 function Home(){
 
     return(
       <>
+      <Body />
       </>
     )
 }
