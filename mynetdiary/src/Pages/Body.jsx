@@ -1,27 +1,27 @@
 import {Box,Text,HStack,VStack,Stack,Flex,SimpleGrid,
     Image,
     Container,
-    Button
+    Button,Link
 } from "@chakra-ui/react"
 
 
 function Body(){
 
     return(
-        <Box w="100%" mt="20"  bgGradient={[
-            'linear(to-tr, teal.300, yellow.400)',
-            'linear(to-t, blue.200, teal.500)',
-            'linear(to-b, orange.100, purple.300)',
-          ]}  width="100%" h="500px"  fontFamily="Cabin,Helvetica,Arial,sans-seri"
+        <Box w="100%" mt="20" bgGradient='linear(to-r, green, green.600)'  width="100%" h="500px"  fontFamily="Cabin,Helvetica,Arial,sans-seri"
           >
           <Flex>
             <Box w="30%" fontSize="70px" lineHeight="70px" pl="10" pt="12"   color="white">
                  <Text >Be Healthy for Life!</Text>
                 <Text mt="25px" fontSize="30px"lineHeight="40px" >Your weight loss, diet, andnutrition assistant.</Text>
-              <Flex mt="30px" w="40%">
-                <Image mr="10" src="https://s3.amazonaws.com/img.mynetdiary.com/images/app-store-badge.svg"/>
-                <Image src="https://s3.amazonaws.com/img.mynetdiary.com/images/google-play-badge.svg" />
-              </Flex>
+              <Flex mt="30px">
+               <Link href="https://apps.apple.com/us/app/calorie-counter-mynetdiary/id287529757?pt=10328&ct=index_page"> 
+               <Image mr="10" w="80%" src="https://s3.amazonaws.com/img.mynetdiary.com/images/app-store-badge.svg"/>
+               </Link>
+               <Link href="https://play.google.com/store/apps/details?id=com.fourtechnologies.mynetdiary.ad&referrer=utm_source%3Dindex_page%26utm_campaign%3Dindex_page_link"> 
+               <Image  w="90%" src="https://s3.amazonaws.com/img.mynetdiary.com/images/google-play-badge.svg" />
+               </Link>
+                </Flex>
                  <Text lineHeight="40px"color="#46618a" mt="150px" fontSize="23px">Top Rated: 61,383 reviews & counting</Text>
            </Box>
            <Box w="30%">
