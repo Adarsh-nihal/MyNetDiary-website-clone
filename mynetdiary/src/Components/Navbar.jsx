@@ -13,7 +13,7 @@ import {Flex,Text,Image,Box,Heading,Spacer,Button,ButtonGroup,
 
 function Navbar(){
 return(
-   <Box bg="white"  pos="fixed" top="0"  p="3" fontFamily="Cabin,Helvetica,Arial,sans-seri" style={{boxShadow:"rgb(0 0 0 / 11%) 0 10px 16px"}}>
+   <Box zIndex="20" bg="white" pos="fixed" top="0"  p="3" fontFamily="Cabin,Helvetica,Arial,sans-seri" style={{boxShadow:"rgb(0 0 0 / 11%) 0 10px 16px"}}>
  <Flex justifyContent="space-between" alignItems="center">
  <Box  w="25%">
       <Flex>
@@ -33,8 +33,8 @@ return(
  </Flex>
  </Box>
   <Box>
-    <Button color="white" bg="orange.300" borderRadius="25px" w="130px" fontSize="20" h="50px"> <Link to="/login">SIGN UP</Link></Button>
-   <Button ml="10"  color="green"  borderRadius="25px" w="130px" bg border="2px solid green" fontSize="20" h="50px"><Link to="/sign">SIGN IN</Link></Button> 
+  <Link to="/login"><Button color="white" bg="orange.300" borderRadius="25px" w="130px" fontSize="20" h="50px"> SIGN UP</Button></Link>
+  <Link to="/sign"> <Button ml="10"  color="green"  borderRadius="25px" w="130px" bg border="2px solid green" fontSize="20" h="50px">SIGN IN</Button> </Link>
    </Box>
  </Flex>
  </Box>
