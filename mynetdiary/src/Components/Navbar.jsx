@@ -24,11 +24,11 @@ return(
   </Box >
   <Box w="40%">
  <Flex fontSize="20"  justifyContent="space-between">
-    <Text>Features</Text>
-    <Text>Features</Text>
-    <Text>Features</Text>
-    <Text>Features</Text>
-    <Text>Features</Text>
+    <Text color="#46618a">Features</Text>
+    <Text color="#46618a">Diets</Text>
+    <Text color="#46618a">Library</Text>
+    <Text color="#46618a">Food</Text>
+    <Text color="#46618a">Bussiness</Text>
 
  </Flex>
  </Box>

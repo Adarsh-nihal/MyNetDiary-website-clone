@@ -4,34 +4,36 @@ import {Box, Container,Flex,Image,Text,Form,Stack,Input,Button,
 import {Link, Navigate} from "react-router-dom"
 import {useState} from "react"
 import {useContext} from "react"
-import {AuthContext} from "../Components/AuthContext"
-let init={
-    name:"",
-    email:"",
-    number:"",
-    password:""
 
+import {AuthContext} from "../Components/AuthContext"
+let inits={
+    email:"",
+    password:""
 }
 
 function Signin(){
-    const{isAuth,toggleAuth}=useContext(AuthContext)
-const[data,setData]=useState(init)
-if(isAuth){
-   return <Navigate to="/Sign"/>
+    // const{isAuth,toggleAuth}=useContext(AuthContext)
+    const[data,setData]=useState(inits)
+const handleChange1=(e)=>{
+  const{value,name}=e.target
+  console.log(name,value)
+  setData({...data,[name]:value})
+}
+const handleSubmit1=()=>{
+console.log(data)
+
 }
 
-
-
-
+const{email,password}=data
 
     return(
        <Box mt="80px" h="600px"  bgGradient='linear(to-r, green, green.600)' >
                  <Container >
-                   
-                   <Link to="/"> <Flex pt="10"><Image  w="12%" bg="white" 
+                  
+                   <Link to="/"><Flex pt="10"><Image w="12%" bg="white" 
                       src="https://play-lh.googleusercontent.com/9EXPE7wCzMCabiu0OwMQeQef1YdQgEbqK0e8No6FKMewCkj48a3v2SPoW5yr5oNy_Jk"/>
-                     <Text  pl="4"  bgGradient='linear(to-l, green.200, white)' 
-                             bgClip='text' fontSize='35px'
+                    <Text  pl="4"  bgGradient='linear(to-l, green.200, white)' 
+                          bgClip='text' fontSize='35px'
                             fontWeight='extrabold' 
                             textDecoration="underline" >
                            MyNetDiary 
@@ -60,11 +62,19 @@ if(isAuth){
                   <Box  w="80%" m="auto" mt="50">
                     <Flex>
                       <Box pl="5" p="6" boxShadow="rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px"  w="43%"     margin="auto">
-                        <Input p="7" fontSize="20" placeholder="Email or Account Name"/>
-                        <Input  mt="8" fontSize="20"  placeholder="Password"/>
+                        <Input p="7" fontSize="20" placeholder="Email or Account Name"
+                         onChange={handleChange1}
+                         name="email"
+                         value={email}
+                        />
+                        <Input  mt="8" fontSize="20"  placeholder="Password"
+                        name="password"
+                        value={password}
+                        onChange={handleChange1}
+                        />
                         <Checkbox mt="5"  >Remember me on this computer</Checkbox>
                         <Flex mt="10">
-                        <Button fontSize="19" bg="green" color="white" padding="20px"  >SIGN IN</Button>
+                        <Button  onClick={handleSubmit1} fontSize="19" bg="green" color="white" padding="20px"  >SIGN IN</Button>
                        <Text  ml="65" mt="3"  color="green" textDecoration="underline">Forget Password?</Text>
                        </Flex>
                     </Box>
@@ -89,7 +99,7 @@ if(isAuth){
 
                     <Text  mt="20" fontSize="18px" textAlign="center">
                         No account? 
-                        <Link to="/login"><span style={{color:"green",textDecoration:"underline"}} >Sign Up</span></Link>,it's easy.
+                      <Link to="/login"><span style={{color:"green",textDecoration:"underline"}} >Sign Up</span></Link>,it's easy.
                     </Text>
                   </Box>
                  

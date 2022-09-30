@@ -15,11 +15,11 @@ function Login(){
     const{isAuth,toggleAuth}=useContext(AuthContext)
 const[data,setData]=useState(init)
 if(isAuth){
-   return <Navigate to="/Sign"/>
+   return <Navigate to="/sign"/>
 }
 
 const handleChange=(e)=>{
-   const{value,type,name}=e.target
+   const{value,name}=e.target
        setData({...data,[name]:value})
 
 }
@@ -28,7 +28,8 @@ const handleSubmit=()=>{
     if(data.name!==""&&data.number!==""&&data.email!==""&&data.password!==""){
 console.log(data)
 alert("signup succesful")
-toggleAuth()
+   toggleAuth()
+
     }else{
         alert("fill the data")
     }
