@@ -40,8 +40,8 @@ function Body(){
 
           <Box  mt="20">
             <Flex >
-                <Image w="20%" height="50px" src="https://s3.amazonaws.com/img.mynetdiary.com/images/logo-usa-today.png" />
-                <Image   w="20%" h="60px" src="https://s3.amazonaws.com/img.mynetdiary.com/images/logo-abc-news.svg" />
+                <Image  w="20%" height="50px" src="https://s3.amazonaws.com/img.mynetdiary.com/images/logo-usa-today.png" />
+                <Image  w="20%" h="60px" src="https://s3.amazonaws.com/img.mynetdiary.com/images/logo-abc-news.svg" />
                 <Image  w="10%" src="https://s3.amazonaws.com/img.mynetdiary.com/images/logo-fox.svg" />
                 <Image  w="10%" h="40px" src="https://s3.amazonaws.com/img.mynetdiary.com/images/logo-times.svg" />
                 <Image  w="20%" h="50px" src="https://s3.amazonaws.com/img.mynetdiary.com/images/logo-consumer-reports.svg" />

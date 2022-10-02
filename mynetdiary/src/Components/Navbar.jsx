@@ -10,6 +10,7 @@ import {Flex,Text,Image,Box,Heading,Spacer,Button,ButtonGroup,
     PopoverCloseButton,
     PopoverAnchor,
 } from "@chakra-ui/react"
+import { ChevronDownIcon } from '@chakra-ui/icons'
 
 function Navbar(){
 return(
@@ -24,11 +25,95 @@ return(
   </Box >
   <Box w="40%">
  <Flex fontSize="20"  justifyContent="space-between">
-    <Text color="#46618a">Features</Text>
-    <Text color="#46618a">Diets</Text>
-    <Text color="#46618a">Library</Text>
-    <Text color="#46618a">Food</Text>
-    <Text color="#46618a">Bussiness</Text>
+   <div style={{pointer:"cursor"}}>
+   <Popover>
+  <PopoverTrigger>
+    <Text color="#46618a" >Features<ChevronDownIcon/> </Text>
+  </PopoverTrigger>
+  <PopoverContent>
+    <PopoverArrow />
+    <PopoverCloseButton />
+
+    <PopoverBody> <li style={{color:"blue"}}>iPhone & iPad app </li></PopoverBody>
+       <PopoverBody> <li style={{color:"blue"}}>Android app </li></PopoverBody>
+    <PopoverBody> <li style={{color:"blue"}}>User </li></PopoverBody> <PopoverBody> <li style={{color:"blue"}}>MyNetDiary vs MyFitnessPal</li></PopoverBody>
+    
+  </PopoverContent>
+</Popover>
+</div>
+
+<div style={{pointer:"cursor"}}>
+   <Popover>
+  <PopoverTrigger>
+    <Text color="#46618a" >Diets<ChevronDownIcon/> </Text>
+  </PopoverTrigger>
+  <PopoverContent>
+    <PopoverArrow />
+    <PopoverCloseButton />
+
+    <PopoverBody> <li style={{color:"blue"}}>Calorie Counting</li></PopoverBody>
+       <PopoverBody> <li style={{color:"blue"}}>Law-Carb </li></PopoverBody>
+    <PopoverBody> <li style={{color:"blue"}}>Keto </li></PopoverBody> 
+    <PopoverBody> <li style={{color:"blue"}}>High-Proteins</li></PopoverBody>
+    <PopoverBody> <li style={{color:"blue"}}>Law-Fat</li></PopoverBody>
+    <PopoverBody> <li style={{color:"blue"}}>Mediterranean</li></PopoverBody>
+    <PopoverBody> <li style={{color:"blue"}}>Vegetarian</li></PopoverBody>
+    <PopoverBody> <li style={{color:"blue"}}>Vegan</li></PopoverBody>
+  </PopoverContent>
+</Popover>
+</div>
+
+<div style={{pointer:"cursor"}}>
+   <Popover>
+  <PopoverTrigger>
+    <Text color="#46618a" >Library<ChevronDownIcon/> </Text>
+  </PopoverTrigger>
+  <PopoverContent>
+    <PopoverArrow />
+    <PopoverCloseButton />
+
+    <PopoverBody> <li style={{color:"blue"}}>Weight Loss Blog</li></PopoverBody>
+       <PopoverBody> <li style={{color:"blue"}}>Diet Library</li></PopoverBody>
+    <PopoverBody> <li style={{color:"blue"}}>Dietitian team</li></PopoverBody> 
+   
+  </PopoverContent>
+</Popover>
+</div>
+
+<div style={{pointer:"cursor"}} >
+   <Popover>
+  <PopoverTrigger>
+    <Text color="#46618a">Food<ChevronDownIcon/> </Text>
+  </PopoverTrigger>
+  <PopoverContent>
+    <PopoverArrow />
+    <PopoverCloseButton />
+
+    <PopoverBody> <li style={{color:"blue"}}>Food Search</li></PopoverBody>
+       <PopoverBody> <li style={{color:"blue"}}>Database Licensing & API</li></PopoverBody>
+   
+  </PopoverContent>
+</Popover>
+</div>
+
+<div style={{pointer:"cursor"}}>
+   <Popover>
+  <PopoverTrigger>
+    <Text color="#46618a" >Bussiness<ChevronDownIcon/> </Text>
+  </PopoverTrigger>
+  <PopoverContent>
+    <PopoverArrow />
+    <PopoverCloseButton />
+
+    <PopoverBody> <li style={{color:"blue"}}>Find Healthcare Professional</li></PopoverBody>
+       <PopoverBody> <li style={{color:"blue"}}>For Healthcare Professionals</li></PopoverBody>
+       <PopoverBody> <li style={{color:"blue"}}>For Trainers and Clubs</li></PopoverBody>
+       <PopoverBody> <li style={{color:"blue"}}>MyNetDiary vs MyFitnessPal</li></PopoverBody>
+       <PopoverBody> <li style={{color:"blue"}}>Food Databse Licensing</li></PopoverBody>
+   
+  </PopoverContent>
+</Popover>
+</div>
 
  </Flex>
  </Box>

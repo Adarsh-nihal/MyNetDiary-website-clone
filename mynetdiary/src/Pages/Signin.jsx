@@ -12,19 +12,33 @@ let inits={
 }
 
 function Signin(){
-    // const{isAuth,toggleAuth}=useContext(AuthContext)
-    const[data,setData]=useState(inits)
+    const{isAuth,toggleAuth,data}=useContext(AuthContext)
+    console.log(data)
+    const[item,setItem]=useState(inits)
+if(isAuth){
+  return <Navigate to="/" />
+}
+
 const handleChange1=(e)=>{
   const{value,name}=e.target
   console.log(name,value)
-  setData({...data,[name]:value})
+  setItem({...item,[name]:value})
 }
 const handleSubmit1=()=>{
-console.log(data)
-
+  if(data.email!==""&&data.password!==""){
+ if(data.email==item.email && data.password==item.password){
+  alert("login succesfull")
+  toggleAuth()
+ }else{
+  alert("Wrong_credentials")
+ }
+}
+else{
+  alert("fill the data first")
+}
 }
 
-const{email,password}=data
+const{email,password}=item
 
     return(
        <Box mt="80px" h="600px"  bgGradient='linear(to-r, green, green.600)' >

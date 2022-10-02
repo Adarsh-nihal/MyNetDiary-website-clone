@@ -1,23 +1,12 @@
 import {Box, Container,Flex,Image,Text,Form,Stack,Input,Button} from "@chakra-ui/react"
-import {Link, Navigate} from "react-router-dom"
+import {Link,useNavigate, Navigate} from "react-router-dom"
 import {useState} from "react"
 import {useContext} from "react"
 import {AuthContext} from "../Components/AuthContext"
-let init={
-    name:"",
-    email:"",
-    number:"",
-    password:""
-
-}
 
 function Login(){
-    const{isAuth,toggleAuth}=useContext(AuthContext)
-const[data,setData]=useState(init)
-if(isAuth){
-   return <Navigate to="/sign"/>
-}
-
+    const{data,setData}=useContext(AuthContext)
+const navigate=useNavigate()
 const handleChange=(e)=>{
    const{value,name}=e.target
        setData({...data,[name]:value})
@@ -27,8 +16,7 @@ const handleChange=(e)=>{
 const handleSubmit=()=>{
     if(data.name!==""&&data.number!==""&&data.email!==""&&data.password!==""){
 console.log(data)
-alert("signup succesful")
-   toggleAuth()
+   navigate("/sign")
 
     }else{
         alert("fill the data")

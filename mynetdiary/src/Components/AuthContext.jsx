@@ -7,6 +7,7 @@ export const AuthContext=createContext()
 
 const AuthContextProvider=({children})=>{
 const[isAuth,setIsAuth]=useState(false)
+const[data,setData]=useState({name:"",email:"",password:"",number:""})
 
 const toggleAuth=()=>{
     if(!isAuth){
@@ -16,7 +17,7 @@ const toggleAuth=()=>{
 
 
     return(
-        <AuthContext.Provider  value={{isAuth,toggleAuth}}>
+        <AuthContext.Provider  value={{isAuth,toggleAuth,data,setData}}>
             {children}
         </AuthContext.Provider>
     )
