@@ -13,6 +13,23 @@ netlify link - https://mynetdiary-adarsh-nihal.vercel.app/
 github - https://github.com/Adarsh-nihal/MyNetDiary-website-clone/tree/main/mynetdiary
 
 
+
+### Functionalities are:
+
+* Login Page
+* SignUp Page
+* Different pages based on different category
+* See more details about the product
+
+### Tech Stack
+
+* React
+* HTML
+* CSS
+* Javascript ( ES6 )
+* Chackra UI
+
+
 ## Screenshots
 
 ![App Screenshot](https://github.com/Adarsh-nihal/Github-image/blob/main/MyNetDiary/Screenshot%20(1015).png?raw=true)
@@ -24,14 +41,6 @@ github - https://github.com/Adarsh-nihal/MyNetDiary-website-clone/tree/main/myne
 ![Screenshot (35)](https://github.com/Adarsh-nihal/Github-image/blob/main/MyNetDiary/Screenshot%20(1020).png?raw=true)
 
 
-## Tech Stack
 
-**Client:** React,Java Script
-
-## 🛠 Skills
-Javascript, HTML, CSS...
-
-
-## Individual Projects
 
 
