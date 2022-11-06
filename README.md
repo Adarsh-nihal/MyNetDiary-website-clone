@@ -28,8 +28,8 @@ github - https://github.com/Adarsh-nihal/MyNetDiary-website-clone/tree/main/myne
 * CSS
 * Javascript ( ES6 )
 * Chackra UI
-* 
-### Type-Individual
+
+# It is Individual Project
 
 ## Screenshots
 
